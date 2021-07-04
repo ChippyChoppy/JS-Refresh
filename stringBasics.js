@@ -77,4 +77,13 @@ console.log(backTicks)
  immute = "Hello World" // this does work!
  console.log(immute) // --> returns "Hello World"
 
- 
+ // bracket notation to find nth character
+
+ console.log(becca[2])
+
+ // last letter
+console.log( becca[becca.length - 1])
+// 2nd, 3rd, etc. to last
+console.log(becca[becca.length-2])
+console.log(becca[becca.length-3])
+
