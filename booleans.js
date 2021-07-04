@@ -39,3 +39,33 @@ function strictEqual(val){
 }
 
 console.log(strictEqual("7"))
+
+//inequality operator
+
+function notEqual(val) {
+    if(val != 99) {
+        return "not equal"
+    } return "equal"
+}
+console.log(notEqual("99"))
+
+//strict inequality
+function strictInequal(val) {
+    if (val !== 17) {
+        return "nope";
+    }
+    return "equal";
+}
+
+console.log(strictInequal(16))
+
+//comparisons w/ logical operators <, >, <=, >=
+function testGreater(val) {
+    if(val > 100) return "over 100";
+    if(val > 10) return "over 10";
+    else return "less than 10"
+}
+console.log(testGreater(1))
+console.log(testGreater(13))
+console.log(testGreater(101))
+
