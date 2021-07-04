@@ -28,3 +28,37 @@ function checkScope() {
 //Function scope i is: function scope
 
 checkScope()
+
+//mutate array declared with const
+
+const s = [5,7,2]
+
+function editInPlace() {
+    "use strict";
+    s[0] = 2;
+    s[1] = 2;
+    s[2] = 56
+}
+editInPlace()
+console.log(s)
+
+//prevent object mutation --> const alone doesn't prevent, so we can use Object.freeze() --> with what we want constant passed as arg
+
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    Object.freeze(MATH_CONSTANTS);
+
+    try { // try catch block, will try first part of block, if error moves to catch and logs it out
+        MATH_CONSTANTS.PI = 99;
+    } catch( ex ) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj()
+console.log(PI);
